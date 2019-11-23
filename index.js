@@ -7,6 +7,14 @@ const router = new Router();
 
 app.use(handlerMiddleare);
 
+router.get('/', (ctx) => {
+  ctx.body = '123';
+});
+
+router.post('/aaaa', (ctx) => {
+  ctx.body = 'aaaa';
+});
+
 router.post("/", function(ctx, next) {
   ctx.handler(ctx.req, ctx.res, function(err) {
     ctx.res.statusCode = 404;
