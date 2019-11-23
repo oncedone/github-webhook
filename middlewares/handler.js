@@ -13,7 +13,7 @@ function run_cmd(cmd, args, callback) {
   });
 }
 
-export default (ctx, next) => {
+module.exports = (ctx, next) => {
   ctx.handler = createHandler({
     path: "/banta_fe",
     secret: "banta"
